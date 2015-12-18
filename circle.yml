@@ -4,10 +4,11 @@ machine:
 
 dependencies:
   cache_directories:
-     - /home/ubuntu/.cabal/packages/hackage.haskell.org/ 
+     - .cabal-sandbox
   pre:
-     - wget https://www.stackage.org/nightly-2015-05-05/cabal.config
-  override: 
+     - cabal update
+  override:
+     - cabal sandbox init 
      - cabal install haste-compiler
      - haste-boot
 
