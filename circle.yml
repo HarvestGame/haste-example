@@ -10,7 +10,7 @@ dependencies:
   override:
      - cabal sandbox init 
      - cabal install haste-compiler
-     - PATH=$PATH:./cabal-sandbox/bin
+     - export PATH=$PATH:.cabal-sandbox/bin
      - haste-boot
 
 test:
