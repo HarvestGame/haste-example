@@ -1,0 +1,14 @@
+machine:
+  ghc:
+    version: 7.10.1
+
+dependencies:
+  pre:
+     - wget https://www.stackage.org/nightly-2015-05-05/cabal.config
+  override: 
+     - cabal install haste-compiler
+     - haste-boot
+
+test:
+  override:
+    - make
