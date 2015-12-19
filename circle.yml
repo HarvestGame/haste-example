@@ -5,12 +5,13 @@ machine:
 dependencies:
   cache_directories:
      - .cabal-sandbox
+     - ~/.haste
   pre:
      - cabal update
   override:
      - cabal sandbox init 
      - cabal install haste-compiler
-     - export PATH=$PATH:.cabal-sandbox/bin
+     - source vars.hs
      - haste-boot
 
 test:
