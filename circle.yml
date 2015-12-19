@@ -11,7 +11,7 @@ dependencies:
   override:
      - cabal sandbox init 
      - cabal install haste-compiler
-     - source vars.hs
+     - source vars.sh
      - haste-boot
 
 test:
